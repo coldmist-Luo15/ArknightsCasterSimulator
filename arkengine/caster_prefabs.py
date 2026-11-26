@@ -1,13 +1,10 @@
 """Read selected CN V079 battle components with their Unity object identities."""
 from collections import deque
-from functools import lru_cache
-from hashlib import sha256
-import json
 from math import isfinite, isnan
 import re
 
 from .mystic_cycle import baked_key_sample
-from .opening_scene import PREFAB_ROOTS_SHA256, bundle_environment
+from .opening_scene import bundle_environment
 from .skill_assets import SCRIPT_ASSET_SHA256, _script_classes
 
 
@@ -19,14 +16,6 @@ def _json_values(value):
     if isinstance(value,dict):
         return {key:_json_values(item) for key,item in value.items()}
     return value
-
-
-@lru_cache(maxsize=1)
-def _root_index(root):
-    raw = (root / "official-prefab-roots.jsonl").read_bytes()
-    if sha256(raw).hexdigest() != PREFAB_ROOTS_SHA256:
-        raise ValueError("官方预制体根索引摘要不符")
-    return {obj["asset"]: obj for obj in map(json.loads, raw.splitlines())}
 
 
 def _components(root, classes):
@@ -73,7 +62,7 @@ def _prefab(tables, kind, name):
     if key not in tables._prefab_data:
         relative = f"battle/prefabs/{kind}/{name}"
         if kind in ("characters", "[uc]tokens","enemies"):
-            entry = _root_index(tables.root).get(relative)
+            entry = tables.prefab_root(relative)
             if not entry:
                 return None
             member, path = entry["bundle"], entry["container_path"]

@@ -126,6 +126,8 @@ def range_sensor_contact(tables,pos,radius,boxes):
     if not near:
         return False
     package=tables.root.parent/"2026-11-18-core-cn2791/client.apk"
+    if not package.is_file():
+        package=package.with_name("runtime-members.zip")
     exact=exact_overlap(package)
     if exact is None:
         return None

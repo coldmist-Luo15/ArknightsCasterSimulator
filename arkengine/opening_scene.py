@@ -61,7 +61,11 @@ class PinnedTables:
 
     def __init__(self, snapshot=DEFAULT_SNAPSHOT):
         self.root = Path(snapshot)
-        manifest = json.loads((self.root / "manifest.json").read_bytes())
+        try:
+            manifest = json.loads((self.root / "manifest.json").read_bytes())
+        except FileNotFoundError as exc:
+            raise FileNotFoundError("请先运行 python -m tools.prepare_data 准备 V079 数据") from exc
+        self.public_assets = manifest.get("asset_delivery") == "official_single"
         index = (self.root / "files.jsonl").read_bytes()
         if (manifest["commit"] != COMMIT or manifest["version_label_in_commit"] != VERSION
                 or manifest["index"]["sha256"] != INDEX_SHA256
@@ -70,7 +74,7 @@ class PinnedTables:
         self._entries = {entry["path"]: entry for entry in map(json.loads, index.splitlines())}
         self._cache = {}
         self._prefab_data = {}
-        self._prefab_roots = None
+        self._prefab_roots = {}
         self._source_name = manifest["source"]
         self.begin_scene()
 
@@ -163,12 +167,47 @@ class PinnedTables:
         entry = self._catalog[member]
         single = str(PurePosixPath(member).with_suffix("")).replace("/", "_").replace("#", "__")
         archive_name = (entry.get("pid") or single) + ".dat"
+        if self.public_assets:
+            from .public_assets import fetch_bundle
+            archive_name = single + ".dat"
+            dest = release / "hot-update" / archive_name
+            if not dest.is_file():
+                fetch_bundle(member, entry, dest)
         with zipfile.ZipFile(release / "hot-update" / archive_name) as archive:
             raw = archive.read(member)
         if len(raw) != entry["abSize"] or hashlib.md5(raw).hexdigest() != entry["md5"]:
             raise ValueError(f"官方模板包长度或 MD5 不符 {member}")
         return raw, dict(archive=archive_name, member=member, sha256=hashlib.sha256(raw).hexdigest(),
                          official_md5=entry["md5"], catalog_sha256=CATALOG_SHA256)
+
+    def prefab_root(self, asset):
+        if self.public_assets:
+            if not self._prefab_roots:
+                raw = (self.root / "zh_CN/resource_manifest_idx.json").read_bytes()
+                if hashlib.sha256(raw).hexdigest() != self._entries["zh_CN/resource_manifest_idx.json"]["sha256"]:
+                    raise ValueError("资源定位表与 V079 索引不符")
+                resource = json.loads(raw)
+                bundles = resource["bundles"]
+                self._prefab_roots.update((r["assetName"], (bundles[r["bundleIndex"]]["name"], r["path"]))
+                                          for r in resource["assetToBundleList"]
+                                          if r["assetName"].startswith("battle/prefabs/"))
+            if asset not in self._prefab_roots:
+                return None
+            key = ("public_prefab_root", asset)
+            if key not in self._prefab_data:
+                member, path = self._prefab_roots[asset]
+                raw, source = self.verified_bundle(member)
+                obj = bundle_environment(raw).container[path].deref()
+                self._prefab_data[key] = dict(bundle=member, container_path=path, root_path_id=obj.path_id,
+                                              source_archive=source["archive"])
+            return self._prefab_data[key]
+        if not self._prefab_roots:
+            data = (self.root / "official-prefab-roots.jsonl").read_bytes()
+            if hashlib.sha256(data).hexdigest() != PREFAB_ROOTS_SHA256:
+                raise ValueError("官方资源定位索引 SHA-256 不符")
+            entries = map(json.loads, data.splitlines())
+            self._prefab_roots.update((e["asset"], e) for e in entries)
+        return self._prefab_roots.get(asset)
 
     def _component_fields(self, category, key, fields, ledger="official_prefabs", component_type="MonoBehaviour",
                           children=()):
@@ -177,13 +216,7 @@ class PinnedTables:
             data, evidence = self._prefab_data[cache_key]
             self.source.setdefault(ledger, {})[key] = evidence
             return data
-        if self._prefab_roots is None:
-            data = (self.root / "official-prefab-roots.jsonl").read_bytes()
-            if hashlib.sha256(data).hexdigest() != PREFAB_ROOTS_SHA256:
-                raise ValueError("官方资源定位索引 SHA-256 不符")
-            entries = map(json.loads, data.splitlines())
-            self._prefab_roots = {e["asset"]: e for e in entries}
-        entry = self._prefab_roots.get(f"battle/prefabs/{category}/{key}")
+        entry = self.prefab_root(f"battle/prefabs/{category}/{key}")
         if entry is None:
             raise ValueError(f"官方对象索引未收录 {category}/{key}")
         raw, evidence = self.verified_bundle(entry["bundle"])

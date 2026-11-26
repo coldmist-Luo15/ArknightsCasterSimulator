@@ -18,6 +18,8 @@ def _script_classes(tables):
     if key in tables._cache:
         return tables._cache[key]
     path = tables.root.parent / "2026-11-18-core-cn2791/client.apk"
+    if not path.is_file():
+        path = path.with_name("runtime-members.zip")
     prefix = "assets/bin/Data/globalgamemanagers.assets.split"
     with zipfile.ZipFile(path) as apk:
         raw = b"".join(apk.read(prefix + str(i)) for i in range(9))

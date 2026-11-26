@@ -8,6 +8,7 @@
 !/tools/
 /tools/*
 !/tools/run_caster_model.py
+!/tools/prepare_data.py
 !/tools/run_caster_roster.py
 !/tools/run_caster_seeds.py
 !/tools/run_opening.py
