@@ -1,0 +1,21 @@
+# Public release tracks the calculator and its command-line entry points.
+/*
+!/.gitignore
+!/README.md
+!/arkengine/
+/arkengine/*
+!/arkengine/*.py
+!/tools/
+/tools/*
+!/tools/run_caster_model.py
+!/tools/run_caster_roster.py
+!/tools/run_caster_seeds.py
+!/tools/run_opening.py
+!/tools/read_spine_events.cjs
+!/tools/vendor/
+/tools/vendor/*
+!/tools/vendor/lz4ak.py
+!/tools/vendor/Ark-Unpacker-LICENSE
+!/tools/vendor/source.json
+__pycache__/
+*.pyc

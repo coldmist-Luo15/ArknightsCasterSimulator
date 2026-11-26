@@ -1,0 +1,8 @@
+{
+  "url": "https://raw.githubusercontent.com/isHarryh/Ark-Unpacker/4a4b9efc6be4690b68b70b4a16578950baa066d3/src/lz4ak/Block.py",
+  "commit": "4a4b9efc6be4690b68b70b4a16578950baa066d3",
+  "upstream_sha256": "55832b28aefe510880bfcf54c0628138b0ee561b46b3fb8830f58fddadcd475a",
+  "local_sha256": "7647091ae5270f0af53a8c7947a1237215ebad9004d9fa10cce0c8491238678f",
+  "adaptation": "replace optional profiler context with nullcontext",
+  "license": "BSD-3-Clause"
+}
