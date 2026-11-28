@@ -24,6 +24,7 @@ class SnowInbound(Intercept):
         self.snow=False
         self.use_late=False
         self.last_wolves=False
+        self.wolf_retry=False
         self.small_mid=False
         self.eye_early=False
         self.finish_tried=set()
@@ -72,6 +73,29 @@ class SnowInbound(Intercept):
             return q
         return super().prepare(q)
 
+    def third_wolf_skill(self,b,act,early=False):
+        frame=b.frame
+        if not 9030<=frame<11250:
+            return
+        wolf=b.operators.get(W)
+        if frame<=9031:
+            planned=b.actions.get(9031,[])
+            remaining=[a for a in planned if a['operator_id']!=W or a.get('kind')!='skill']
+            if len(remaining)==len(planned):
+                return
+            if frame==9030:
+                if early and wolf and ready(wolf,frame):
+                    b.actions[9031]=remaining
+                    act(cast(frame,W))
+                return
+            if not wolf or not ready(wolf,frame):
+                b.actions[9031]=remaining
+                self.wolf_retry=True
+            return
+        if self.wolf_retry and wolf and ready(wolf,frame) and any(not e.cursor.hidden for e in b.live.values()):
+            act(cast(frame,W))
+            self.wolf_retry=False
+
     def __call__(self,b,act,stats):
         if self.name_mode.startswith('select-') and b.frame==2701:
             gun=b.live.get(FIRST_GUN)
@@ -114,11 +138,7 @@ class SnowInbound(Intercept):
                 act(cast(b.frame,S))
                 self.snow=True
                 self.small_mid=mid is not None and mid.hp<=12000*2**32
-        if special and b.frame==9030 and self.small_mid:
-            wolf=b.operators.get(W)
-            if wolf and ready(wolf,b.frame):
-                b.actions[9031]=[a for a in b.actions[9031] if a['operator_id']!=W]
-                act(cast(b.frame,W))
+        self.third_wolf_skill(b,act,early=special and self.small_mid)
         if special and 8641<=b.frame<8708 and not self.eye_early and not self.fire:
             eye=b.operators.get(E)
             truth=b.operators.get(T)

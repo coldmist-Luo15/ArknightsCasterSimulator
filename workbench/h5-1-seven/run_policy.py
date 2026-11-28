@@ -47,7 +47,7 @@ def main():
         mode = "sample"
         tag = f"{args.sample_seed}-{args.trials}"
     jobs = [(name, mode, battle, terrain) for battle, terrain in pairs for name in args.policies]
-    path = args.output or here / f"compare-{tag}.jsonl"
+    path = args.output or here / f"compare-wolf-ready-{tag}.jsonl"
     path.parent.mkdir(parents=True, exist_ok=True)
     run_rows(path, replay, jobs, args.workers)
     print(path)
