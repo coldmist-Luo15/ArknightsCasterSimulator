@@ -96,6 +96,9 @@ ORDINARY_STAGE_SKILLS = {
 
 
 def run_caster_stage(tables,request):
+    if request.get("stage_id") == "level_recalrune_01-03":
+        from .recal_battle import run_recal_stage
+        return run_recal_stage(tables, request)
     mode=request.get("scene_model")
     actions=request.get("actions",[])
     tracked=any(k.startswith(("track_","sp_sample","cost_sample")) for k in request)

@@ -3,11 +3,12 @@
 A skill's display grid and its attack, summon and splash selectors are distinct.
 Module data is returned for exactly one phase, separate from the operator's traits.
 """
+from .attributes import base_integer_at_level
 from .caster_runtime import current_talents
 
 
 GALLUS = "char_4227_gallus"
-EXTRA_CASTERS = frozenset(("夜魔", "蜜蜡", "和弦", "雪绒", "GALLUS²"))
+EXTRA_CASTERS = frozenset(("夜魔", "蜜蜡", "和弦", "雪绒", "GALLUS²", "杜林"))
 REMOVED_SKILL_SLOTS = {
     "char_4046_ebnhlz": (1, 2),
     "char_134_ifrit": (1,),
@@ -67,14 +68,15 @@ def _modules(tables, uid):
             yield mid, item, battle[mid]["phases"]
 
 
-def _base_stats(unit):
-    # Exactly the max promotion/level/trust/potential panel, before traits, talents or equipment.
+def _base_stats(unit, level):
+    # The panel before traits, talents or equipment, with full trust and potential.
     phase = unit["phases"][-1]
-    base, = (r["data"] for r in phase["attributesKeyFrames"] if r["level"] == phase["maxLevel"])
+    frames = phase["attributesKeyFrames"]
+    base, = (r["data"] for r in frames if r["level"] == phase["maxLevel"])
     trust = max(unit["favorKeyFrames"], key=lambda row: row["level"])["data"]
-    stats = {field: base[field] + trust[field] for field in PANEL_FIELDS.values()}
+    stats = {field: base_integer_at_level(frames, level, field) + trust[field]
+             for field in (*PANEL_FIELDS.values(), "blockCnt")}
     stats["baseAttackTime"] = base["baseAttackTime"] + trust["baseAttackTime"]
-    stats["blockCnt"] = base["blockCnt"] + trust["blockCnt"]
     for rank in unit["potentialRanks"]:
         for item in (rank["buff"] or {}).get("attributes", {}).get("attributeModifiers", ()):
             field = PANEL_FIELDS.get(item["attributeType"].lower())
@@ -101,8 +103,8 @@ def _selected_module(tables, uid, module, level):
     return mid, item, selected[0]
 
 
-def resolve_caster_loadout(tables, operator, skill=None, module=None, *, skill_level=None, module_level=None):
-    """Use maximum ranks for selected equipment and skills, leaving unused slots empty."""
+def resolve_caster_loadout(tables, operator, skill=None, module=None, *, skill_level=None, module_level=None, level=None):
+    """Resolve the selected level and default unspecified upgrades to maximum ranks."""
     uid, unit = _matching(operator, [((k, u), (k, u["name"], u["appellation"])) for k, u in target_casters(tables).items()],
                           "目标术师")
     if unit["skills"]:
@@ -120,7 +122,13 @@ def resolve_caster_loadout(tables, operator, skill=None, module=None, *, skill_l
         raise ValueError(f"{unit['name']} 没有可携带的技能")
     mid, item, phase = _selected_module(tables, uid, module, module_level)
     progression = _max_progression(unit)
-    base = _base_stats(unit)
+    if level is not None:
+        if type(level) is not int or not 1 <= level <= progression["level"]:
+            raise ValueError(f"{unit['name']} 干员等级无效 {level!r}")
+        if item and level < item["unlockLevel"]:
+            raise ValueError(f"{unit['name']} 的所选模组在 {item['unlockLevel']} 级解锁")
+        progression["level"] = level
+    base = _base_stats(unit, progression["level"])
     stats = base.copy()
     if phase:
         for entry in phase["attributeBlackboard"]:
@@ -228,3 +236,34 @@ def caster_catalog(tables):
         operators.append(dict(id=uid, name=unit["name"], branch=unit["subProfessionId"], **_max_progression(unit),
                               base_range=ranges[unit["phases"][-1]["rangeId"]], skills=skills, modules=modules))
     return dict(source=tables.source, operators=operators)
+
+
+def caster_loadout_options(tables):
+    """Compact equipment and skill menus for choosing a squad before writing its request."""
+    catalog = caster_catalog(tables)
+    return {row["id"]: dict(name=row["name"],
+                skills={f"S{skill['slot']}": skill["name"] for skill in row["skills"]},
+                modules={m["branch"]: dict(id=m["id"], name=m["name"], levels=m["levels"])
+                         for m in row["modules"]})
+            for row in catalog["operators"]}
+
+
+_SOLE_MODULE = object()
+
+
+def pick_caster(options, operator_id, skill, *, branch=_SOLE_MODULE):
+    """Use the sole available branch by default, or select a branch or None explicitly."""
+    row = options[operator_id]
+    if f"S{skill}" not in row["skills"] and not (skill is None and not row["skills"]):
+        raise ValueError(f"{row['name']} 的候选技能为 {list(row['skills'])}")
+    pick = dict(operator_id=operator_id, skill=skill)
+    if branch is _SOLE_MODULE:
+        if len(row["modules"]) > 1:
+            raise ValueError(f"{row['name']} 有多个可选模组，请指定分支 {', '.join(row['modules'])}")
+        branch = next(iter(row["modules"]), None)
+    if branch is not None:
+        if branch not in row["modules"]:
+            raise ValueError(f"{row['name']} 的候选模组为 {', '.join(row['modules']) or '无'}")
+        module = row["modules"][branch]
+        pick.update(module=module["id"], module_level=max(module["levels"]))
+    return pick

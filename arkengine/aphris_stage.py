@@ -150,6 +150,7 @@ class AphrisCombat:
             self.switch=self.charge["mode_switch_frame"]
             self.mode="starting"
             self.counter=CasterAmmoCounter(self.evidence)
+        return cast["cast_frame"]
 
     def objects(self,frame):
         if APHRIS not in self.beam.present:

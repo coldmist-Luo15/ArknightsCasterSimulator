@@ -139,7 +139,8 @@ def prepare_channel(tables,request,*,operator,skill,module=None,stage_id=None,di
     module=module or pick.get("module")
     if not module and not allow_no_module:
         raise ValueError("关卡回放需要选择一个常规模组")
-    card=resolve_caster_loadout(tables,operator,skill,module,module_level=pick.get("module_level"),skill_level=pick.get("skill_level"))
+    card=resolve_caster_loadout(tables,operator,skill,module,module_level=pick.get("module_level"),
+                               skill_level=pick.get("skill_level"),level=pick.get("level"))
     config={k:card[k] for k in ("operator_id","elite","level","potential","skill","skill_level","module","module_level")}
     if allow_partial_movement and "skin_id" in pick:
         config["skin_id"]=pick["skin_id"]

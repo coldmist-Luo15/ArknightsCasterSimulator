@@ -23,6 +23,23 @@ from .trace_motion import ordinary_trace_step
 from .volley_damage import _raw_f32
 
 
+def remote_funnel_profiles(evidence, parts, mode, board, dt):
+    keys = []
+    explosions = {}
+    for ref in mode["_funnelActions"][:1+int(board["attack@cnt"])]:
+        key = parts[ref["m_PathID"]]["fields"]["_projectileKey"]
+        variants = evidence["projectiles"][key]
+        logic = variants.get("logic") or next(iter(variants.values()))
+        projectile = {p["script"]:p["fields"] for p in logic["components"]}
+        move, hit = projectile["AttachToTarget"], projectile["GdglowHitBehaviour"]
+        if (move["_delayToStart"] or move["_followTarget"] or move["_delayAfterReached"]
+                or not move["_checkReached"] or hit["_waitFirstPeriod"]):
+            raise ValueError("澄闪的浮游单元附着时钟变化")
+        keys.append(key)
+        explosions[key] = _blast_profile(evidence, hit, dt)
+    return keys, explosions
+
+
 def run_goldenglow_stage(tables, request):
     return run_with_phalanx_waves(_simulate,tables,request)
 
@@ -80,19 +97,7 @@ def _simulate(tables,request,releases):
     if mover["_moveType"]!=1 or mover["_delayToStart"]:
         raise ValueError("澄闪普通追踪弹配置变化")
 
-    drone_keys = []
-    explosions = {}
-    for ref in mode["_funnelActions"][:1+int(board["attack@cnt"])]:
-        key = parts[ref["m_PathID"]]["fields"]["_projectileKey"]
-        variants = ev["projectiles"][key]
-        logic = variants.get("logic") or next(iter(variants.values()))
-        projectile = {p["script"]:p["fields"] for p in logic["components"]}
-        move,hit = projectile["AttachToTarget"],projectile["GdglowHitBehaviour"]
-        if (move["_delayToStart"] or move["_followTarget"] or move["_delayAfterReached"]
-                or not move["_checkReached"] or hit["_waitFirstPeriod"]):
-            raise ValueError("澄闪的浮游单元附着时钟变化")
-        drone_keys.append(key)
-        explosions[key] = _blast_profile(ev,hit,dt)
+    drone_keys, explosions = remote_funnel_profiles(ev, parts, mode, board, dt)
 
     explosion_stacks={key:1 for key in drone_keys}
     births = {}

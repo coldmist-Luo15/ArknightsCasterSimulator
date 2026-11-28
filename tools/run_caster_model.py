@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from arkengine.caster_catalog import caster_catalog
+from arkengine.caster_catalog import caster_catalog, caster_loadout_options
 from arkengine.caster_model import run_caster
 from arkengine.caster_prefabs import _json_values
 from arkengine.opening_scene import PinnedTables
@@ -17,6 +17,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--catalog", action="store_true", help="列出所有选定术师、技能与模组")
+    source.add_argument("--loadout-options", action="store_true", help="组队前查看逐干员的技能、常规模组分支、完整 ID 和等级")
     source.add_argument("--request",type=Path,nargs="+",help="一个或多个 UTF-8 JSON，多个输入共享实包缓存并依次独立运行")
     parser.add_argument("--output", type=Path)
     parser.add_argument("--cost-model", choices=("native_q32", "uniform_frames"),
@@ -26,6 +27,8 @@ def main():
         tables = PinnedTables()
         if args.catalog:
             data = caster_catalog(tables)
+        elif args.loadout_options:
+            data = caster_loadout_options(tables)
         else:
             results=[]
             for path in args.request:

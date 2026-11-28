@@ -6,9 +6,13 @@ from functools import lru_cache
 import hashlib
 import json
 from pathlib import Path, PurePosixPath
+from typing import TYPE_CHECKING
 import sys
 import zipfile
 from .runtime_data import DATA_ROOT
+
+if TYPE_CHECKING:
+    from .recal_scene import RecalRules
 
 
 if sys.platform=="win32" and sys.version_info[:2]==(3,14):
@@ -308,6 +312,7 @@ class OpeningScene:
     device_skills: dict
     predefine_slot_costs: dict
     source: dict
+    recal: "RecalRules | None" = None
 
     def enemy_level(self, enemy):
         """Level-zero DB rows overlay a newly allocated EnemyData whose levelType starts at NORMAL."""
@@ -324,7 +329,7 @@ class OpeningScene:
         return data["tiles"][grid[len(grid) - 1 - row][col]]
 
 
-def _enemy_rows(level, tables):
+def _enemy_rows(level, tables, *, allow_talent_override=False):
     if level["enemies"]:
         raise ValueError("尚未实现关卡内联敌人数据")
     refs = level["enemyDbRefs"] or []
@@ -335,13 +340,25 @@ def _enemy_rows(level, tables):
     enemies = {}
     for ref in refs:
         key = ref["id"]
-        if (ref["useDb"] is not True or ref["overwrittenData"] is not None
+        overrides = ref["overwrittenData"]
+        if (ref["useDb"] is not True or (overrides is not None and not allow_talent_override)
                 or ref["level"] != 0 or key in enemies):
             raise ValueError(f"尚未支持敌人行的覆盖、非基础等级或重复引用 {key}")
         rows = [r for r in database.get(key, []) if r["level"] == ref["level"]]
         if len(rows) != 1:
             raise ValueError(f"敌人基础等级行不唯一或缺失 {key}")
-        enemies[key] = rows[0]["enemyData"]
+        data = rows[0]["enemyData"]
+        if overrides is not None:
+            def defined(value):
+                if isinstance(value, dict):
+                    return value.get("m_defined") if "m_defined" in value else any(defined(v) for v in value.values())
+                return value is not None
+            if any(defined(v) for k,v in overrides.items() if k != "talentBlackboard"):
+                raise ValueError(f"此关敌人的附加覆盖尚未接入 {key}")
+            merged = {row["key"]: row for row in data.get("talentBlackboard") or ()}
+            merged.update((row["key"], row) for row in overrides.get("talentBlackboard") or ())
+            data = dict(data, talentBlackboard=list(merged.values()))
+        enemies[key] = data
     return enemies
 
 
@@ -375,8 +392,11 @@ def _opening_predefines(scene, tables):
             scene.device_skills[identity] = levels[rank - 1]
 
 
-def load_opening_scene(snapshot=DEFAULT_SNAPSHOT, *, stage_id, tables=None):
+def load_opening_scene(snapshot=DEFAULT_SNAPSHOT, *, stage_id, tables=None, recal_rune_ids=None):
     tables = tables if tables is not None else PinnedTables(snapshot)
+    if recal_rune_ids is not None:
+        from .recal_scene import load_recal_scene
+        return load_recal_scene(tables, stage_id, recal_rune_ids)
     tables.begin_scene()
     stage = tables.read("excel/stage_table.json")["stages"].get(stage_id)
     if stage is None or stage["difficulty"] != "NORMAL":
