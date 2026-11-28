@@ -1,0 +1,55 @@
+{
+  "stage_id": "main_01-09",
+  "squad": [
+    {
+      "operator": "夜魔",
+      "skill": 1,
+      "module": "Y",
+      "module_level": 3
+    },
+    {
+      "operator": "阿米娅",
+      "skill": 2,
+      "module": null
+    }
+  ],
+  "actions": [
+    {
+      "operator_id": "char_164_nightm",
+      "frame": 500,
+      "row": 2,
+      "col": 6,
+      "direction": "RIGHT"
+    },
+    {
+      "operator_id": "char_002_amiya",
+      "frame": 1300,
+      "row": 1,
+      "col": 6,
+      "direction": "RIGHT"
+    },
+    {
+      "operator_id": "char_164_nightm",
+      "kind": "skill",
+      "phase": "after_tick",
+      "frame": 1600
+    }
+  ],
+  "clock": {
+    "fragment_start_frame": 1540,
+    "cost_input_order": "cost_before_input",
+    "spawn_schedule": "native_wave"
+  },
+  "movement": {
+    "first_born_tick_delay_frames": 1
+  },
+  "incoming_hits": [
+    {
+      "frame": 2200,
+      "source": "w0-f0-a1-n0",
+      "holder": "char_002_amiya",
+      "damage_type": "PHYSICAL",
+      "incoming_after_defense": 1000
+    }
+  ]
+}

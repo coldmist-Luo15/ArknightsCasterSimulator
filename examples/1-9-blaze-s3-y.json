@@ -1,0 +1,20 @@
+{
+  "stage_id": "main_01-09",
+  "squad": [
+    {"operator": "烛煌", "skill": 3, "module": "Y", "module_level": 3}
+  ],
+  "actions": [
+    {"operator_id": "char_1040_blaze2", "frame": 500, "row": 2, "col": 6, "direction": "RIGHT"},
+    {"operator_id": "char_1040_blaze2", "kind": "skill", "frame": 1600, "phase": "after_tick"},
+    {"operator_id": "char_1040_blaze2", "kind": "skill", "frame": 3500, "phase": "after_tick"},
+    {"operator_id": "char_1040_blaze2", "kind": "skill", "frame": 5400, "phase": "after_tick"}
+  ],
+  "clock": {
+    "fragment_start_frame": 1540,
+    "cost_input_order": "cost_before_input",
+    "spawn_schedule": "native_wave"
+  },
+  "movement": {
+    "first_born_tick_delay_frames": 1
+  }
+}

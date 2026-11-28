@@ -1,0 +1,10 @@
+{
+  "scene_model":"caster_combat","stage_id":"main_01-09",
+  "squad":[{"operator":"艾雅法拉","skill":3,"module":"X"}],
+  "actions":[
+    {"operator_id":"char_180_amgoat","frame":310,"row":1,"col":5,"direction":"RIGHT"},
+    {"kind":"skill","operator_id":"char_180_amgoat","frame":492,"phase":"after_tick"}
+  ],
+  "clock":{"fragment_start_frame":0,"cost_input_order":"cost_before_input","spawn_schedule":"native_wave"},
+  "movement":{"first_born_tick_delay_frames":1},"eyja_deployment_seed":74,"end_frame":600
+}

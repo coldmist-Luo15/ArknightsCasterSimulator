@@ -1,0 +1,12 @@
+{
+  "loadout":{"operator":"异客","skill":3,"module":"Y","module_level":3},
+  "events":[{
+    "kind":"storm_battle","frame":0,"end_frame":2100,"rows":8,"cols":8,"seed":42,
+    "placement":{"row":3,"col":3,"direction":"RIGHT","spine_view":"Front"},
+    "press_frames":[950,1900],
+    "targets":[
+      {"id":"主靶","row":5,"col":3,"radius":0.1,"spawn":1850,"route_remaining":30,"hp":12000,"max_hp":12000,"res":20},
+      {"id":"侧靶","row":6,"col":3,"radius":0.1,"spawn":1850,"route_remaining":20,"hp":5000,"max_hp":12000,"res":20}
+    ]
+  }]
+}

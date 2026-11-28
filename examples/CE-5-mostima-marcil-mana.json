@@ -1,0 +1,15 @@
+{
+  "stage_id": "wk_melee_5",
+  "squad": [
+    {"operator_id":"char_4141_marcil","elite":2,"level":90,"potential":6,"skill":3,"skill_level":10,"module":"uniequip_002_marcil","module_level":1},
+    {"operator_id":"char_213_mostma","elite":2,"level":90,"potential":6,"skill":3,"skill_level":10,"module":"uniequip_002_mostma","module_level":3}
+  ],
+  "actions": [
+    {"operator_id":"char_4141_marcil","frame":1,"row":1,"col":2,"direction":"UP"},
+    {"operator_id":"char_213_mostma","frame":151,"row":1,"col":3,"direction":"UP"}
+  ],
+  "clock": {"fragment_start_frame":0,"cost_input_order":"cost_before_input","spawn_schedule":"native_wave"},
+  "track_skill_points": true,
+  "sp_sample_frames": [1,150,151,225,226,227,300,301,302],
+  "end_frame": 302
+}

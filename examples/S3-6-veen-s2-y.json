@@ -1,0 +1,40 @@
+{
+  "scene_model": "caster_combat",
+  "stage_id": "sub_03-3-1",
+  "squad": [
+    {
+      "operator_id": "char_4226_veen",
+      "elite": 2,
+      "level": 90,
+      "potential": 6,
+      "skill": 2,
+      "skill_level": 10,
+      "module": "uniequip_002_veen",
+      "module_level": 3
+    }
+  ],
+  "actions": [
+    {
+      "operator_id": "char_4226_veen",
+      "frame": 455,
+      "row": 2,
+      "col": 3,
+      "direction": "LEFT"
+    },
+    {
+      "operator_id": "char_4226_veen",
+      "kind": "skill",
+      "frame": 1530,
+      "phase": "after_tick"
+    }
+  ],
+  "clock": {
+    "fragment_start_frame": 900,
+    "cost_input_order": "cost_before_input",
+    "spawn_schedule": "native_wave"
+  },
+  "movement": {
+    "first_born_tick_delay_frames": 1
+  },
+  "end_frame": 2050
+}

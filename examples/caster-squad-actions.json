@@ -1,0 +1,12 @@
+{
+  "frame": 900,
+  "moment": "input",
+  "squad_state": [
+    {"loadout":{"operator":"异客","skill":3,"module":"Y"},
+     "state":{"owner_state":"idle","triggerable":true,"sp":60,"trigger_search_passed":false}},
+    {"loadout":{"operator":"林","skill":3,"module":"X"},
+     "state":{"owner_state":"idle","triggerable":true,"sp":50}},
+    {"loadout":{"operator":"澄闪","skill":2,"module":"X"},
+     "state":{"owner_state":"idle","triggerable":true,"sp":70}}
+  ]
+}

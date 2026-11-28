@@ -1,0 +1,9 @@
+{
+  "loadout": {"operator": "林", "skill": 3, "module": "Y"},
+  "events": [
+    {"kind": "range", "frame": 100, "rows": 8, "cols": 12, "placement": {"row": 3, "col": 4, "direction": "RIGHT"}},
+    {"kind": "skill_timeline", "frame": 100, "phase": "after_tick", "sp": 50, "end_frame": 1110},
+    {"kind": "incoming_sp", "frame": 110, "phase": "OBJECTS", "source": "enemy#1", "index": 0, "seed": 74, "ignore_for_sp": false, "sp_blocked": true},
+    {"kind": "lin_impact", "frame": 120, "source": "Attack", "aura_count": 2, "receivers": {"enemy#1": {"hp_q32": 17179869184000, "resistance_q32": 128849018880}}}
+  ]
+}

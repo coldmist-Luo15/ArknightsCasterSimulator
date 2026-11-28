@@ -1,0 +1,325 @@
+{
+  "scene_model": "caster_combat",
+  "stage_id": "level_recalrune_01-03",
+  "squad": [
+    {
+      "operator_id": "char_1046_sbell2",
+      "skill": 3,
+      "module": "Y"
+    },
+    {
+      "operator_id": "char_1038_whitw2",
+      "skill": 3,
+      "module": "X"
+    },
+    {
+      "operator_id": "char_213_mostma",
+      "skill": 3,
+      "module": "Y"
+    },
+    {
+      "operator_id": "char_180_amgoat",
+      "skill": 3,
+      "module": "X"
+    },
+    {
+      "operator_id": "char_4141_marcil",
+      "skill": 3,
+      "module": "Y"
+    },
+    {
+      "operator_id": "char_4133_logos",
+      "skill": 2,
+      "module": "D"
+    },
+    {
+      "operator_id": "char_4204_mantra",
+      "skill": 3,
+      "module": "X"
+    }
+  ],
+  "actions": [
+    {
+      "frame": 361,
+      "operator_id": "char_1046_sbell2",
+      "direction": "RIGHT",
+      "row": 4,
+      "col": 4
+    },
+    {
+      "frame": 704,
+      "operator_id": "char_1046_sbell2",
+      "kind": "skill"
+    },
+    {
+      "frame": 936,
+      "operator_id": "char_4133_logos",
+      "direction": "RIGHT",
+      "row": 5,
+      "col": 6
+    },
+    {
+      "frame": 1238,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 1662,
+      "operator_id": "char_4141_marcil",
+      "direction": "RIGHT",
+      "row": 5,
+      "col": 4
+    },
+    {
+      "frame": 1670,
+      "operator_id": "char_1046_sbell2",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 1938,
+      "operator_id": "char_4204_mantra",
+      "direction": "LEFT",
+      "row": 4,
+      "col": 4
+    },
+    {
+      "frame": 2020,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 2219,
+      "operator_id": "char_4204_mantra",
+      "kind": "skill"
+    },
+    {
+      "frame": 2365,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 2455,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 2485,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 2576,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 2700,
+      "operator_id": "char_4204_mantra",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 2743,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 2856,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 2869,
+      "operator_id": "char_180_amgoat",
+      "direction": "LEFT",
+      "row": 3,
+      "col": 8
+    },
+    {
+      "frame": 2953,
+      "operator_id": "char_180_amgoat",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 3054,
+      "operator_id": "char_4141_marcil",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 3152,
+      "operator_id": "char_1038_whitw2",
+      "direction": "LEFT",
+      "row": 5,
+      "col": 10
+    },
+    {
+      "frame": 3296,
+      "operator_id": "char_213_mostma",
+      "direction": "LEFT",
+      "row": 4,
+      "col": 8
+    },
+    {
+      "frame": 3404,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3988,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4900,
+      "operator_id": "char_213_mostma",
+      "kind": "skill"
+    },
+    {
+      "frame": 5415,
+      "operator_id": "trap_006_antidr",
+      "direction": "LEFT",
+      "row": 4,
+      "col": 4
+    },
+    {
+      "frame": 5448,
+      "operator_id": "char_1046_sbell2",
+      "direction": "RIGHT",
+      "row": 5,
+      "col": 4
+    },
+    {
+      "frame": 5736,
+      "operator_id": "char_1046_sbell2",
+      "kind": "skill"
+    },
+    {
+      "frame": 5754,
+      "operator_id": "char_4133_logos",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 6426,
+      "operator_id": "char_4141_marcil",
+      "direction": "LEFT",
+      "row": 5,
+      "col": 6
+    },
+    {
+      "frame": 6642,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 7020,
+      "operator_id": "char_4204_mantra",
+      "direction": "LEFT",
+      "row": 3,
+      "col": 8
+    },
+    {
+      "frame": 7305,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 7461,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 7480,
+      "operator_id": "char_4204_mantra",
+      "kind": "skill"
+    },
+    {
+      "frame": 7902,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 8260,
+      "operator_id": "char_213_mostma",
+      "kind": "skill"
+    },
+    {
+      "frame": 8271,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 8473,
+      "operator_id": "char_180_amgoat",
+      "direction": "LEFT",
+      "row": 2,
+      "col": 5
+    },
+    {
+      "frame": 8630,
+      "operator_id": "char_1046_sbell2",
+      "kind": "skill"
+    },
+    {
+      "frame": 8669,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 8698,
+      "operator_id": "char_4141_marcil",
+      "kind": "skill"
+    },
+    {
+      "frame": 8731,
+      "operator_id": "char_180_amgoat",
+      "kind": "skill"
+    },
+    {
+      "frame": 9031,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 9550,
+      "operator_id": "char_4204_mantra",
+      "kind": "skill"
+    },
+    {
+      "frame": 9576,
+      "operator_id": "char_213_mostma",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 9576,
+      "operator_id": "char_4133_logos",
+      "direction": "UP",
+      "row": 4,
+      "col": 8
+    }
+  ],
+  "clock": {
+    "fragment_start_frame": 0,
+    "cost_input_order": "cost_before_input",
+    "spawn_schedule": "native_wave"
+  },
+  "movement": {
+    "first_born_tick_delay_frames": 1
+  },
+  "recal_rune_ids": [
+    "base",
+    "token_build_b",
+    "enemy_speed_b",
+    "enemy_silenceImmue_a",
+    "emppnt_level_up_2",
+    "airforce_frost_2",
+    "airforce_lazerd_2",
+    "char_respawntime_2",
+    "tyokai_immue_3",
+    "enemy_attri_atk_2",
+    "defdrn_up_2",
+    "emppnt_more_2",
+    "global_squadnum_2",
+    "char_exclude_tavasn_3"
+  ],
+  "battle_random_seed": 1628992184,
+  "map_random_seed": 818739297
+}

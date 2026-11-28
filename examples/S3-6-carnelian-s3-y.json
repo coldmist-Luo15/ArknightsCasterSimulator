@@ -1,0 +1,10 @@
+{
+  "scene_model":"caster_combat", "stage_id":"sub_03-3-1",
+  "squad":[{"operator":"卡涅利安", "skill":3, "module":"Y"}],
+  "actions":[
+    {"operator_id":"char_426_billro", "frame":365, "row":6, "col":4, "direction":"LEFT"},
+    {"operator_id":"char_426_billro", "kind":"skill", "frame":1476, "phase":"after_tick"}
+  ],
+  "clock":{"fragment_start_frame":490, "cost_input_order":"cost_before_input", "spawn_schedule":"native_wave"},
+  "movement":{"first_born_tick_delay_frames":1}, "end_frame":1553
+}

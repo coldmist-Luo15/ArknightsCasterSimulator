@@ -1,0 +1,12 @@
+{
+  "loadout":{"operator":"维伊","skill":2,"module":"Y","module_level":3},
+  "events":[{
+    "kind":"veen_bolt_battle","frame":100,"end_frame":350,"rows":7,"cols":7,
+    "placement":{"row":3,"col":3,"direction":"RIGHT"},"origin":[3,3,0],
+    "has_merged_attack_buff":false,"s2_stacks":2,
+    "targets":[
+      {"id":"带标记","row":3,"col":4,"radius":0.1,"route_remaining":1,"hp":5000,"res":0,"has_veen_dot":true,"hit_mount":[4,3,0]},
+      {"id":"新靶","row":3,"col":5,"radius":0.1,"route_remaining":2,"hp":2700,"res":0,"has_veen_dot":false,"hit_mount":[5,3,0]}
+    ]
+  }]
+}

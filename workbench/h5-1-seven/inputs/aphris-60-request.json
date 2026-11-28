@@ -1,0 +1,459 @@
+{
+  "scene_model": "caster_combat",
+  "stage_id": "level_recalrune_01-03",
+  "squad": [
+    {
+      "operator_id": "char_1046_sbell2",
+      "skill": 3,
+      "module": "Y"
+    },
+    {
+      "operator_id": "char_1038_whitw2",
+      "skill": 3,
+      "module": "X"
+    },
+    {
+      "operator_id": "char_213_mostma",
+      "skill": 3,
+      "module": "Y"
+    },
+    {
+      "operator_id": "char_180_amgoat",
+      "skill": 3,
+      "module": "X"
+    },
+    {
+      "operator_id": "char_4229_aphris",
+      "skill": 3,
+      "module": "Y"
+    },
+    {
+      "operator_id": "char_4133_logos",
+      "skill": 2,
+      "module": "D"
+    },
+    {
+      "operator_id": "char_4204_mantra",
+      "skill": 3,
+      "module": "X"
+    }
+  ],
+  "actions": [
+    {
+      "frame": 361,
+      "operator_id": "char_1046_sbell2",
+      "direction": "RIGHT",
+      "row": 4,
+      "col": 4
+    },
+    {
+      "frame": 704,
+      "operator_id": "char_1046_sbell2",
+      "kind": "skill"
+    },
+    {
+      "frame": 936,
+      "operator_id": "char_4133_logos",
+      "direction": "RIGHT",
+      "row": 5,
+      "col": 6
+    },
+    {
+      "frame": 1238,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 1662,
+      "operator_id": "char_4229_aphris",
+      "direction": "RIGHT",
+      "row": 5,
+      "col": 4
+    },
+    {
+      "frame": 1670,
+      "operator_id": "char_1046_sbell2",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 1938,
+      "operator_id": "char_4204_mantra",
+      "direction": "LEFT",
+      "row": 4,
+      "col": 4
+    },
+    {
+      "frame": 2219,
+      "operator_id": "char_4204_mantra",
+      "kind": "skill"
+    },
+    {
+      "frame": 2365,
+      "operator_id": "char_4229_aphris",
+      "kind": "skill"
+    },
+    {
+      "frame": 2700,
+      "operator_id": "char_4204_mantra",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 2743,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 2899,
+      "operator_id": "char_180_amgoat",
+      "direction": "LEFT",
+      "row": 3,
+      "col": 8
+    },
+    {
+      "frame": 2953,
+      "operator_id": "char_180_amgoat",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 3054,
+      "operator_id": "char_4229_aphris",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 3152,
+      "operator_id": "char_1038_whitw2",
+      "direction": "LEFT",
+      "row": 5,
+      "col": 10
+    },
+    {
+      "frame": 3296,
+      "operator_id": "char_213_mostma",
+      "direction": "LEFT",
+      "row": 3,
+      "col": 8
+    },
+    {
+      "frame": 3404,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3419,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3434,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3449,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3464,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3479,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3494,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3509,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3524,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3539,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3554,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 3988,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4003,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4018,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4033,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4048,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4063,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4078,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4093,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4108,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4123,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4138,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    },
+    {
+      "frame": 4900,
+      "operator_id": "char_213_mostma",
+      "kind": "skill"
+    },
+    {
+      "frame": 5415,
+      "operator_id": "trap_006_antidr",
+      "direction": "LEFT",
+      "row": 4,
+      "col": 4
+    },
+    {
+      "frame": 5448,
+      "operator_id": "char_1046_sbell2",
+      "direction": "RIGHT",
+      "row": 5,
+      "col": 4
+    },
+    {
+      "frame": 5736,
+      "operator_id": "char_1046_sbell2",
+      "kind": "skill"
+    },
+    {
+      "frame": 5754,
+      "operator_id": "char_4133_logos",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 6520,
+      "operator_id": "char_4229_aphris",
+      "direction": "LEFT",
+      "row": 4,
+      "col": 8
+    },
+    {
+      "frame": 6642,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 6798,
+      "operator_id": "char_1046_sbell2",
+      "kind": "withdraw"
+    },
+    {
+      "frame": 7020,
+      "operator_id": "char_4204_mantra",
+      "direction": "DOWN",
+      "row": 5,
+      "col": 6
+    },
+    {
+      "frame": 7351,
+      "operator_id": "char_180_amgoat",
+      "direction": "RIGHT",
+      "row": 5,
+      "col": 4
+    },
+    {
+      "frame": 7480,
+      "operator_id": "char_4204_mantra",
+      "kind": "skill"
+    },
+    {
+      "frame": 7492,
+      "operator_id": "char_4229_aphris",
+      "kind": "skill"
+    },
+    {
+      "frame": 7670,
+      "operator_id": "char_4229_aphris",
+      "direction": "DOWN",
+      "row": 4,
+      "col": 7,
+      "kind": "relay_deploy",
+      "relay": "down_b"
+    },
+    {
+      "frame": 7671,
+      "operator_id": "char_4229_aphris",
+      "direction": "LEFT",
+      "row": 1,
+      "col": 7,
+      "kind": "relay_deploy",
+      "relay": "west_b"
+    },
+    {
+      "frame": 7724,
+      "operator_id": "char_4229_aphris",
+      "kind": "relay_withdraw",
+      "relay": "down_b"
+    },
+    {
+      "frame": 7724,
+      "operator_id": "char_4229_aphris",
+      "kind": "relay_withdraw",
+      "relay": "west_b"
+    },
+    {
+      "frame": 7724,
+      "operator_id": "char_4229_aphris",
+      "direction": "DOWN",
+      "row": 4,
+      "col": 6,
+      "kind": "relay_deploy",
+      "relay": "down_c"
+    },
+    {
+      "frame": 7950,
+      "operator_id": "char_180_amgoat",
+      "kind": "skill"
+    },
+    {
+      "frame": 8604,
+      "operator_id": "char_4229_aphris",
+      "direction": "LEFT",
+      "row": 3,
+      "col": 6,
+      "kind": "relay_deploy",
+      "relay": "left_d"
+    },
+    {
+      "frame": 8656,
+      "operator_id": "char_213_mostma",
+      "kind": "skill"
+    },
+    {
+      "frame": 9001,
+      "operator_id": "char_1038_whitw2",
+      "kind": "skill"
+    },
+    {
+      "frame": 9051,
+      "operator_id": "char_4229_aphris",
+      "kind": "relay_withdraw",
+      "relay": "left_d"
+    },
+    {
+      "frame": 9051,
+      "operator_id": "char_4229_aphris",
+      "direction": "LEFT",
+      "row": 2,
+      "col": 6,
+      "kind": "relay_deploy",
+      "relay": "aim_south"
+    },
+    {
+      "frame": 9256,
+      "operator_id": "char_4229_aphris",
+      "direction": "UP",
+      "row": 4,
+      "col": 6,
+      "kind": "relay_deploy",
+      "relay": "ordinary_tip"
+    },
+    {
+      "frame": 9550,
+      "operator_id": "char_4204_mantra",
+      "kind": "skill"
+    },
+    {
+      "frame": 10474,
+      "operator_id": "char_1046_sbell2",
+      "direction": "RIGHT",
+      "row": 5,
+      "col": 6
+    },
+    {
+      "frame": 10475,
+      "operator_id": "char_4133_logos",
+      "direction": "RIGHT",
+      "row": 4,
+      "col": 4
+    },
+    {
+      "frame": 10714,
+      "operator_id": "char_1046_sbell2",
+      "kind": "skill"
+    },
+    {
+      "frame": 11869,
+      "operator_id": "char_4133_logos",
+      "kind": "skill"
+    }
+  ],
+  "clock": {
+    "fragment_start_frame": 0,
+    "cost_input_order": "cost_before_input",
+    "spawn_schedule": "native_wave"
+  },
+  "movement": {
+    "first_born_tick_delay_frames": 1
+  },
+  "recal_rune_ids": [
+    "base",
+    "token_build_b",
+    "enemy_speed_b",
+    "enemy_silenceImmue_a",
+    "emppnt_level_up_2",
+    "airforce_frost_2",
+    "airforce_lazerd_2",
+    "char_respawntime_2",
+    "tyokai_immue_3",
+    "enemy_attri_atk_2",
+    "defdrn_up_2",
+    "emppnt_more_2",
+    "global_squadnum_2",
+    "char_exclude_tavasn_3"
+  ],
+  "battle_random_seed": 1787257439,
+  "map_random_seed": 1190258882
+}

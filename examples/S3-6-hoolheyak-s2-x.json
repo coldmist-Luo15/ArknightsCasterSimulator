@@ -1,0 +1,11 @@
+{
+  "scene_model":"caster_combat","stage_id":"sub_03-3-1","battle_random_seed":42,
+  "squad":[{"operator_id":"char_4027_heyak","elite":2,"level":90,"potential":6,"skill":2,
+            "skill_level":10,"module":"uniequip_002_heyak","module_level":3}],
+  "actions":[
+    {"operator_id":"char_4027_heyak","frame":303,"row":2,"col":3,"direction":"LEFT"},
+    {"operator_id":"char_4027_heyak","kind":"skill","frame":1200,"phase":"after_tick"}
+  ],
+  "clock":{"fragment_start_frame":490,"cost_input_order":"cost_before_input","spawn_schedule":"native_wave"},
+  "movement":{"first_born_tick_delay_frames":1},"end_frame":1450
+}

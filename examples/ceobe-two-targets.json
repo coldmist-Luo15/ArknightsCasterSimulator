@@ -1,0 +1,14 @@
+{
+  "loadout": {"operator":"刻俄柏","skill":2,"module":"X","module_level":3},
+  "events": [{
+    "kind":"ceobe_battle","frame":0,"end_frame":870,"rows":5,"cols":7,
+    "placement":{"row":2,"col":1,"tile_z":-0.2,"direction":"RIGHT"},
+    "view":"Front","round_position":true,"no_adjacent_ally":true,
+    "targets":[
+      {"id":"薄甲靶","prefab":"enemy_1002_nsabr","level":"NORMAL","row":2,"col":2,"tile_z":0,
+       "hp":3600,"defense":150,"res":20,"remaining_route_distance":3,"blocked":true},
+      {"id":"厚甲靶","prefab":"enemy_1002_nsabr","level":"ELITE","row":2,"col":3,"tile_z":0,
+       "hp":4200,"defense":1200,"res":20,"remaining_route_distance":4,"blocked":false}
+    ]
+  }]
+}

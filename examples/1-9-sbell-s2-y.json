@@ -1,0 +1,9 @@
+{
+  "scene_model": "caster_combat", "stage_id": "main_01-09",
+  "squad": [{"operator": "圣聆初雪", "skill": 2, "module": "Y"}],
+  "actions": [
+    {"operator_id": "char_1046_sbell2", "frame": 365, "row": 2, "col": 8, "direction": "LEFT"}
+  ],
+  "clock": {"fragment_start_frame": 1600, "cost_input_order": "cost_before_input", "spawn_schedule": "native_wave"},
+  "movement": {"first_born_tick_delay_frames": 1}, "end_frame": 1866
+}

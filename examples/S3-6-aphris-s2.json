@@ -1,0 +1,12 @@
+{
+  "scene_model":"aphris_s2_channel",
+  "stage_id":"sub_03-3-1",
+  "squad":[{"operator_id":"char_4229_aphris","elite":2,"level":90,"potential":6,"skill":2,"skill_level":10,"module":"uniequip_002_aphris","module_level":3}],
+  "actions":[
+    {"operator_id":"char_4229_aphris","frame":661,"row":6,"col":3,"direction":"DOWN"},
+    {"kind":"skill","operator_id":"char_4229_aphris","frame":1230,"phase":"after_tick"}
+  ],
+  "clock":{"fragment_start_frame":490,"cost_input_order":"cost_before_input","spawn_schedule":"native_wave"},
+  "movement":{"first_born_tick_delay_frames":1},
+  "end_frame":1472
+}

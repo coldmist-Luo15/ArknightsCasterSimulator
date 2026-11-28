@@ -1,0 +1,12 @@
+{
+  "scene_model":"ifrit_s3_channel",
+  "stage_id":"sub_03-3-1",
+  "squad":[{"operator_id":"char_134_ifrit","elite":2,"level":90,"potential":6,"skill":3,"skill_level":10,"module":"uniequip_003_ifrit","module_level":3}],
+  "actions":[
+    {"operator_id":"char_134_ifrit","frame":661,"row":2,"col":3,"direction":"UP"},
+    {"kind":"skill","operator_id":"char_134_ifrit","frame":1404,"phase":"after_tick"}
+  ],
+  "clock":{"fragment_start_frame":490,"cost_input_order":"cost_before_input","spawn_schedule":"native_wave"},
+  "movement":{"first_born_tick_delay_frames":1},
+  "end_frame":1474
+}

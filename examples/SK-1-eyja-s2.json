@@ -1,0 +1,10 @@
+{
+  "scene_model": "caster_combat",
+  "stage_id": "wk_armor_1",
+  "squad": [{"operator": "艾雅法拉", "skill": 2, "module": "X"}],
+  "actions": [{"operator_id": "char_180_amgoat", "frame": 301, "row": 2, "col": 3, "direction": "RIGHT"}],
+  "clock": {"fragment_start_frame": 150, "cost_input_order": "cost_before_input", "spawn_schedule": "native_wave"},
+  "movement": {"first_born_tick_delay_frames": 1},
+  "eyja_deployment_seed": 74,
+  "end_frame": 3700
+}

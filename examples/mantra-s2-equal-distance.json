@@ -1,0 +1,23 @@
+{
+  "loadout": {"operator": "真言", "skill": 2, "module": "X"},
+  "events": [{
+    "kind": "mantra_s2_scene", "frame": 0, "rows": 7, "cols": 9, "round_position": true,
+    "placement": {"row": 3, "col": 1, "direction": "RIGHT", "tile_z": -0.2},
+    "enemy": {
+      "row": 3, "col": 4, "tile_z": 0, "radius": 0.1, "prefab": "enemy_1002_nsabr",
+      "level": "NORMAL", "palsy_immune": true, "hp_q32": 214748364800000, "arts_resistance_q32": 85899345920
+    },
+    "secondaries": [
+      {
+        "row": 3.1, "col": 4.8, "tile_z": 0, "radius": 0.1, "prefab": "enemy_1002_nsabr",
+        "level": "NORMAL", "palsy_immune": true, "hp_q32": 214748364800000, "arts_resistance_q32": 85899345920,
+        "distance_to_exit": 3.08, "instance_uid": 10
+      },
+      {
+        "row": 2.9, "col": 4.8, "tile_z": 0, "radius": 0.1, "prefab": "enemy_1002_nsabr",
+        "level": "NORMAL", "palsy_immune": true, "hp_q32": 214748364800000, "arts_resistance_q32": 85899345920,
+        "distance_to_exit": 3.04, "instance_uid": 11
+      }
+    ]
+  }]
+}

@@ -1,0 +1,67 @@
+{
+  "scene_model": "caster_combat",
+  "stage_id": "sub_03-3-1",
+  "squad": [
+    {
+      "operator": "谬因",
+      "skill": 3,
+      "module": "Y"
+    }
+  ],
+  "actions": [
+    {
+      "operator_id": "char_4229_aphris",
+      "frame": 620,
+      "row": 6,
+      "col": 3,
+      "direction": "DOWN"
+    },
+    {
+      "kind": "relay_deploy",
+      "frame": 830,
+      "relay": "old",
+      "row": 5,
+      "col": 3,
+      "direction": "DOWN"
+    },
+    {
+      "kind": "skill",
+      "operator_id": "char_4229_aphris",
+      "frame": 910,
+      "phase": "after_tick"
+    },
+    {
+      "kind": "relay_deploy",
+      "frame": 920,
+      "relay": "straight",
+      "row": 5,
+      "col": 3,
+      "direction": "DOWN"
+    },
+    {
+      "kind": "relay_deploy",
+      "frame": 930,
+      "relay": "bend",
+      "row": 4,
+      "col": 3,
+      "direction": "RIGHT"
+    },
+    {
+      "kind": "relay_deploy",
+      "frame": 970,
+      "relay": "second_bend",
+      "row": 4,
+      "col": 5,
+      "direction": "UP"
+    }
+  ],
+  "clock": {
+    "fragment_start_frame": 900,
+    "cost_input_order": "cost_before_input",
+    "spawn_schedule": "native_wave"
+  },
+  "movement": {
+    "first_born_tick_delay_frames": 1
+  },
+  "description": "三台中继器串联。第一台同向，第二台向右，第三台向上；不指定终止帧。"
+}

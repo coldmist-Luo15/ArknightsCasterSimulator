@@ -1,0 +1,8 @@
+{
+  "loadout":{"operator":"谬因","skill":3,"module":"uniequip_002_aphris","module_level":3},
+  "events":[{
+    "kind":"aphris_s3_magazine","frame":0,"skill_press_frame":240,"rows":7,"cols":9,
+    "placement":{"row":3,"col":2,"direction":"RIGHT"},"relays":[],
+    "target":{"row":3,"col":4,"enter_frame":332,"hp":160000,"resistance":0}
+  }]
+}

@@ -1,0 +1,13 @@
+{
+  "loadout":{"operator":"维伊","skill":3,"module":"Y","module_level":3},
+  "events":[{
+    "kind":"veen_bolt_battle","frame":100,"end_frame":350,"rows":7,"cols":9,
+    "placement":{"row":3,"col":3,"direction":"RIGHT"},"origin":[3,3,0],
+    "ammo":27,"energy_units":2,"has_merged_attack_buff":false,
+    "targets":[
+      {"id":"甲","row":3,"col":5,"radius":0.1,"route_remaining":1,"hp":5000,"res":0,"has_veen_dot":false,"hit_mount":[5,3,0]},
+      {"id":"乙","row":3,"col":6,"radius":0.1,"route_remaining":2,"hp":5000,"res":0,"has_veen_dot":false,"hit_mount":[6,3,0]},
+      {"id":"丙","row":3,"col":7,"radius":0.1,"route_remaining":3,"hp":5000,"res":0,"has_veen_dot":false,"hit_mount":[7,3,0]}
+    ]
+  }]
+}

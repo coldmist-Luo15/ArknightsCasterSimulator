@@ -1,0 +1,12 @@
+{
+  "loadout": {"operator":"和弦","skill":1,"module":"X"},
+  "events": [{
+    "kind":"stationary_battle","entry":"deploy","frame":0,"end_frame":600,"rows":5,"cols":7,
+    "placement":{"row":2,"col":1,"direction":"RIGHT","spine_view":"Front","z":-0.5},
+    "blocker":{"position":[2,3],"capacity":1,"mode":"WALK","first_search_frame":0,"withdraw_frame":310},
+    "targets":[
+      {"id":"前靶","prefab":"enemy_1006_shield","motion_mode":"WALK","row":2,"col":3,"radius":0.18,"route_remaining":1,"res":0,"hp":6500,"hit_offset":[0,0,-0.3]},
+      {"id":"后靶","prefab":"enemy_1006_shield","motion_mode":"WALK","row":2,"col":4,"radius":0.18,"route_remaining":3,"res":0,"hp":1400,"hit_offset":[0,0,-0.3]}
+    ]
+  }]
+}

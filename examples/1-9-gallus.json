@@ -1,0 +1,9 @@
+{
+  "stage_id": "main_01-09",
+  "squad": [{"operator": "GALLUS²"}],
+  "actions": [
+    {"operator_id": "char_4227_gallus", "frame": 450, "row": 2, "col": 6, "direction": "RIGHT"}
+  ],
+  "clock": {"fragment_start_frame": 0, "cost_input_order": "cost_before_input", "spawn_schedule": "native_wave"},
+  "movement": {"first_born_tick_delay_frames": 1}
+}

@@ -1,0 +1,15 @@
+{
+  "scene_model": "caster_combat",
+  "stage_id": "sub_05-1-2",
+  "squad": [
+    {"operator_id": "char_213_mostma", "elite": 2, "level": 90, "potential": 6,
+     "skill": 3, "skill_level": 10, "module": "uniequip_002_mostma", "module_level": 3}
+  ],
+  "actions": [
+    {"operator_id": "char_213_mostma", "frame": 661, "row": 1, "col": 5, "direction": "RIGHT"},
+    {"kind": "skill", "operator_id": "char_213_mostma", "frame": 1353, "phase": "after_tick"}
+  ],
+  "clock": {"fragment_start_frame": 1420, "cost_input_order": "cost_before_input", "spawn_schedule": "native_wave"},
+  "movement": {"first_born_tick_delay_frames": 1},
+  "end_frame": 1830
+}

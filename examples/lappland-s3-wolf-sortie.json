@@ -1,0 +1,12 @@
+{
+  "loadout":{"operator":"荒芜拉普兰德","skill":3,"module":"X","module_level":3},
+  "events":[{
+    "kind":"wolf_sortie","frame":0,"end_frame":560,"rows":11,"cols":11,
+    "placement":{"row":5,"col":4,"direction":"RIGHT","spine_view":"Front"},
+    "press_frames":[300],"native_seed":17,"native_prior_draws":0,
+    "targets":[
+      {"id":"甲","row":5,"col":9,"radius":0.1,"spawn":1,"route_remaining":30,"hp":1400,"res":0,"character_type":true},
+      {"id":"乙","row":5,"col":10,"radius":0.1,"spawn":405,"route_remaining":25,"hp":1200,"res":0,"character_type":true}
+    ]
+  }]
+}

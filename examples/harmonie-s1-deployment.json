@@ -1,0 +1,11 @@
+{
+  "loadout":{"operator":"和弦","skill":1,"module":"X","module_level":3},
+  "events":[{
+    "kind":"stationary_battle","entry":"deploy","frame":0,"end_frame":550,"rows":5,"cols":7,
+    "placement":{"row":2,"col":1,"direction":"RIGHT","spine_view":"Front","z":-0.5},
+    "targets":[
+      {"id":"持续阻挡靶","row":2,"col":3,"radius":0.18,"route_remaining":1,"blocked":true,"res":0,"hp":6500,"hit_offset":[0,0,-0.3]},
+      {"id":"后续靶","row":2,"col":4,"radius":0.18,"route_remaining":3,"blocked":false,"res":0,"hp":1400,"hit_offset":[0,0,-0.3]}
+    ]
+  }]
+}

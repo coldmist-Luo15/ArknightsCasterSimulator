@@ -1,0 +1,36 @@
+{
+  "description": "4-2 黑键三技能，X 三级模组，满配，从部署连续推进至关卡结算。",
+  "stage_id": "main_04-02",
+  "squad": [
+    {
+      "operator": "黑键",
+      "skill": 3,
+      "module": "X"
+    }
+  ],
+  "clock": {
+    "fragment_start_frame": 0,
+    "cost_input_order": "cost_before_input",
+    "spawn_schedule": "native_wave",
+    "position_rounding": true
+  },
+  "actions": [
+    {
+      "operator_id": "char_4046_ebnhlz",
+      "row": 2,
+      "col": 1,
+      "direction": "LEFT",
+      "frame": 400
+    },
+    {
+      "kind": "skill",
+      "operator_id": "char_4046_ebnhlz",
+      "frame": 730,
+      "phase": "after_tick"
+    }
+  ],
+  "movement": {
+    "first_born_tick_delay_frames": 1
+  },
+  "scene_model": "caster_combat"
+}

@@ -1,0 +1,13 @@
+{
+  "description": "普通主线 2-2 的部署边界测试。首笔回费取第 30 帧、首片段从第 0 帧起算，均为测试条件。",
+  "stage_id": "main_02-02",
+  "squad": [
+    {"operator_id": "char_102_texas", "elite": 2, "level": 30, "potential": 1, "skill": 1, "module": null, "module_level": null}
+  ],
+  "clock": {"first_cost_frame": 30, "fragment_start_frame": 0},
+  "actions": [
+    {"frame": 29, "operator_id": "char_102_texas", "row": 1, "col": 1, "direction": "RIGHT"},
+    {"frame": 31, "operator_id": "char_102_texas", "row": 1, "col": 1, "direction": "RIGHT"}
+  ],
+  "end_frame": 120
+}

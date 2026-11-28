@@ -1,0 +1,9 @@
+{
+  "profile": "eyja_default_vs_basic_crossbow",
+  "legal_commit_range": [0, 12],
+  "gate_frame": 12,
+  "muzzle": [0, 0, 0],
+  "target_steps": [[0, [1.08, 0, 0]], [7, [1.5, 0, 0]]],
+  "first_move_lags": [2, 3],
+  "on_hit": "lethal"
+}

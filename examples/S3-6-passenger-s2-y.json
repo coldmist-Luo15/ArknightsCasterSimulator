@@ -1,0 +1,40 @@
+{
+  "scene_model": "caster_combat",
+  "stage_id": "sub_03-3-1",
+  "squad": [
+    {
+      "operator_id": "char_472_pasngr",
+      "elite": 2,
+      "level": 90,
+      "potential": 6,
+      "skill": 2,
+      "skill_level": 10,
+      "module": "uniequip_003_pasngr",
+      "module_level": 3
+    }
+  ],
+  "actions": [
+    {
+      "operator_id": "char_472_pasngr",
+      "frame": 705,
+      "row": 2,
+      "col": 3,
+      "direction": "RIGHT"
+    },
+    {
+      "operator_id": "char_472_pasngr",
+      "kind": "skill",
+      "frame": 1310,
+      "phase": "after_tick"
+    }
+  ],
+  "clock": {
+    "fragment_start_frame": 1200,
+    "cost_input_order": "cost_before_input",
+    "spawn_schedule": "native_wave"
+  },
+  "movement": {
+    "first_born_tick_delay_frames": 1
+  },
+  "end_frame": 2140
+}

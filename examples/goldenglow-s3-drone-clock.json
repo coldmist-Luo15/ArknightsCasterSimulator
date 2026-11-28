@@ -1,0 +1,8 @@
+{
+  "loadout":{"operator":"澄闪","skill":3,"module":"X","module_level":3},
+  "events":[{
+    "kind":"attached_drone_battle","entry":"fresh_drone_group_reached","frame":100,"end_frame":250,
+    "rows":8,"cols":8,"seed":1129,"placement":{"row":1,"col":1,"direction":"RIGHT"},
+    "targets":[{"id":"远端靶","row":6,"col":6,"radius":0.12,"route_remaining":2,"hp":1800,"res":0}]
+  }]
+}

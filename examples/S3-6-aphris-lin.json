@@ -1,0 +1,16 @@
+{
+  "scene_model": "caster_combat",
+  "stage_id": "sub_03-3-1",
+  "squad": [
+    {"operator": "谬因", "skill": 2, "module": "Y"},
+    {"operator": "林", "skill": 3, "module": "X"}
+  ],
+  "actions": [
+    {"operator_id": "char_4229_aphris", "frame": 661, "row": 6, "col": 3, "direction": "DOWN"},
+    {"operator_id": "char_4080_lin", "frame": 1100, "row": 2, "col": 3, "direction": "LEFT"},
+    {"kind": "skill", "operator_id": "char_4229_aphris", "frame": 1230, "phase": "after_tick"}
+  ],
+  "clock": {"fragment_start_frame": 490, "cost_input_order": "cost_before_input", "spawn_schedule": "native_wave"},
+  "movement": {"first_born_tick_delay_frames": 1},
+  "end_frame": 1472
+}

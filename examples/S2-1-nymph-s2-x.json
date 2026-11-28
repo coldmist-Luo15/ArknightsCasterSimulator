@@ -1,0 +1,35 @@
+{
+  "scene_model": "caster_combat",
+  "stage_id": "sub_02-01",
+  "squad": [
+    {
+      "operator": "妮芙",
+      "skill": 2,
+      "module": "X"
+    }
+  ],
+  "actions": [
+    {
+      "operator_id": "char_4146_nymph",
+      "frame": 455,
+      "row": 3,
+      "col": 2,
+      "direction": "RIGHT"
+    },
+    {
+      "operator_id": "char_4146_nymph",
+      "kind": "skill",
+      "frame": 610,
+      "phase": "after_tick"
+    }
+  ],
+  "clock": {
+    "fragment_start_frame": 600,
+    "cost_input_order": "cost_before_input",
+    "spawn_schedule": "native_wave"
+  },
+  "movement": {
+    "first_born_tick_delay_frames": 1
+  },
+  "end_frame": 643
+}

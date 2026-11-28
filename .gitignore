@@ -35,6 +35,9 @@
 /workbench/h5-1-seven/*
 !/workbench/h5-1-seven/*.py
 !/workbench/h5-1-seven/inputs/
+/workbench/h5-1-seven/inputs/*
+!/workbench/h5-1-seven/inputs/*.json
+!/workbench/h5-1-seven/inputs/*.jsonl
 !/workbench/h5-1-seven/README.md
 __pycache__/
 *.pyc

@@ -1,0 +1,13 @@
+{
+  "loadout": {"operator":"和弦", "skill":1, "module":"X", "module_level":3},
+  "events": [{
+    "kind":"stationary_battle", "frame":400, "end_frame":530, "last_active_frame":490,
+    "stored":4, "loop_elapsed_seconds":0.25, "rows":5, "cols":7,
+    "placement":{"row":2,"col":1,"direction":"RIGHT","spine_view":"Front","z":-0.5},
+    "targets":[
+      {"id":"被阻挡的近终点靶","row":2,"col":3,"radius":0.18,"route_remaining":2,"blocked":true,"res":0,"hp":4500,"hit_offset":[0,0,-0.3]},
+      {"id":"后续靶","row":2,"col":4,"radius":0.18,"route_remaining":5,"blocked":false,"res":0,"hp":1400,"hit_offset":[0,0,-0.3]},
+      {"id":"技能范围外","row":3,"col":3,"radius":0.18,"route_remaining":1,"blocked":false,"res":0,"hp":500,"hit_offset":[0,0,-0.3]}
+    ]
+  }]
+}

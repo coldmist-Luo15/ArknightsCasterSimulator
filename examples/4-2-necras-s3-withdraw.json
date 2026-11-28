@@ -1,0 +1,12 @@
+{
+  "stage_id": "main_04-02",
+  "squad": [{"operator": "死芒", "skill": 3, "module": "SOC-X", "module_level": 3}],
+  "clock": {"fragment_start_frame": 490, "cost_input_order": "cost_before_input", "spawn_schedule": "native_wave"},
+  "movement": {"first_born_tick_delay_frames": 1},
+  "battle_random_seed": 0,
+  "actions": [
+    {"operator_id": "char_450_necras", "frame": 303, "row": 2, "col": 2, "direction": "RIGHT"},
+    {"kind": "servant_withdraw", "frame": 1404, "row": 1, "col": 3},
+    {"kind": "skill", "operator_id": "char_450_necras", "frame": 1750}
+  ]
+}

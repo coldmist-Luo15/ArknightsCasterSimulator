@@ -1,0 +1,4 @@
+interface:
+  display_name: "明日方舟模拟打图"
+  short_description: "使用项目逐帧模拟器试部署、开技与撤退，并用整局回放验证操作轴"
+  default_prompt: "使用 $arknights-timeline，按我选定的关卡、阵容、技能和模组，用项目模拟器试出并验证操作轴。"

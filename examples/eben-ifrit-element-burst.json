@@ -1,0 +1,29 @@
+{
+  "loadout": {"operator":"黑键","skill":3,"module":"D"},
+  "events": [
+    {
+      "kind": "enemy_elements", "frame": 11, "end_frame": 13, "receiver_object_uid": 20,
+      "enemy": {"enemy_level":"ELITE", "hp_q32":214748364800000, "base_arts_resistance_q32":0},
+      "source_loadouts": {"伊芙利特":{"operator":"伊芙利特","skill":2,"module":"D"}},
+      "hits": [
+        {"frame":11,"tick_owner_uid":30,"source":"char_4046_ebnhlz","kind":"buildup","element":"DARK","amount_q32":4209067950080},
+        {"frame":11,"tick_owner_uid":30,"source":"伊芙利特","kind":"buildup","element":"FIRE","amount_q32":4209067950080},
+        {"frame":12,"phase":"coroutines","source":"伊芙利特","kind":"ifrit_delta_hit","ability":"attack_hit","actual_attack_q32":4660039516160,"arts_resistance_before_fire_q32":0},
+        {"tick_owner_uid":31,"source":"char_4046_ebnhlz","kind":"eben_delta_projectile","mode":"Default","projectile":"main","target_center":[1,3],"other_living_centers":[],
+         "flight":{"launch_frame":9,"origin":[2,1.15,0],"target_mounts":[[3,1.15,0],[3,1.15,0],[3,1.15,0],[3,1.15,0]],"round_position":true}}
+      ]
+    },
+    {
+      "kind": "enemy_elements", "frame": 11, "end_frame": 13, "receiver_object_uid": 20,
+      "enemy": {"enemy_level":"ELITE", "hp_q32":214748364800000, "base_arts_resistance_q32":0},
+      "source_loadouts": {"伊芙利特":{"operator":"伊芙利特","skill":2,"module":"D"}},
+      "hits": [
+        {"frame":11,"tick_owner_uid":30,"source":"char_4046_ebnhlz","kind":"buildup","element":"DARK","amount_q32":4209067950080},
+        {"frame":11,"tick_owner_uid":30,"source":"伊芙利特","kind":"buildup","element":"FIRE","amount_q32":4209067950080},
+        {"frame":12,"phase":"coroutines","source":"伊芙利特","kind":"ifrit_delta_hit","ability":"attack_hit","actual_attack_q32":4660039516160,"arts_resistance_before_fire_q32":0},
+        {"tick_owner_uid":31,"source":"char_4046_ebnhlz","kind":"eben_delta_projectile","mode":"Default","projectile":"main","target_center":[1,3],"other_living_centers":[],
+         "flight":{"launch_frame":9,"origin":[1.65,1.15,0],"target_mounts":[[3,1.15,0],[3,1.15,0],[3,1.15,0],[3,1.15,0]],"round_position":true}}
+      ]
+    }
+  ]
+}

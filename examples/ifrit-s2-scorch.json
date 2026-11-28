@@ -1,0 +1,9 @@
+{
+  "loadout":{"operator":"伊芙利特","skill":2,"module":"uniequip_003_ifrit","module_level":3},
+  "events":[{
+    "kind":"ifrit_s2_scorch","frame":0,"end_frame":1033,"rows":7,"cols":9,
+    "placement":{"row":3,"col":2,"direction":"RIGHT"},"facing":"Front",
+    "target":{"row":3,"col":4,"radius":0.15,"enter_frame":900,"leave_frame":940,
+              "enemy_level":"NORMAL","hp":16000,"resistance":0,"defense":700}
+  }]
+}

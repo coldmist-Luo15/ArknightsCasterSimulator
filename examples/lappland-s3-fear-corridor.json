@@ -1,0 +1,16 @@
+{
+  "loadout":{"operator":"荒芜拉普兰德","skill":3,"module":"X","module_level":3},
+  "events":[{
+    "kind":"wolf_sortie","frame":0,"end_frame":550,"rows":11,"cols":16,
+    "placement":{"row":5,"col":4,"direction":"RIGHT","spine_view":"Front"},
+    "press_frames":[300],"native_seed":17,"native_prior_draws":0,"trace_positions":true,
+    "fear_terrain":{"walkable":[[5,7],[5,8],[5,9],[5,10],[5,11],[5,12],[5,13],[5,14],[5,15]],
+                    "exit":[5,15],"map_seed":29,"map_prior_draws":0},
+    "targets":[{
+      "id":"重装防御者","prefab":"enemy_1006_shield","row":5,"col":9,"radius":0.10000000149011612,
+      "spawn":0,"route_remaining":6,"route_target":[5,15],"remaining_wait_frames":1200,
+      "hp":6000,"res":0,"move_speed":0.75,"velocity":[0,0],"movement_state":"MOVE",
+      "character_type":false,"fear_immune":false,"status_resistance":false
+    }]
+  }]
+}

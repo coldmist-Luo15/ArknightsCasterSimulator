@@ -1,0 +1,610 @@
+{
+  "title": "全息 H5-1 七术师 22 级通关轴",
+  "setup": "国服 V079，七人精二满级、满潜、专三、三级模组。圣聆初雪 S3/Y3、荒芜拉普兰德 S3/X3、莫斯提马 S3/Y3、艾雅法拉 S3/X3、玛露西尔 S3/Y3、逻各斯 S2/Δ3、真言 S3/X3。",
+  "result": "从 F0 模拟通关。F10720 击破最后一名组长，F10751 结算。64 敌全灭，剩 1 生命。战斗种子 `1407735752`，地图种子 `1982040983`。\n\n艾雅法拉 F2899 落 D9 朝左，F2941 炮机锁定 D9，F2953 撤退。F9576 先撤 E9 的莫斯提马，费用从 67 返到 79，再在同格朝上部署逻各斯，费用降到 51。这份表对应这对种子的完整模拟回放。\n\n[词条选择](词条选择.md) · [费用尺](costbarruler.json) · [输入](request.json) · [回放](result.json)",
+  "steps": [
+    {
+      "frame": 361,
+      "cost": "22 → 0",
+      "cost_bar": {
+        "dp": 22,
+        "natural_gains": 12,
+        "frame_in_cycle": 0,
+        "cycle_length": 30,
+        "ruler_display": "0/29"
+      },
+      "operation": "部署圣聆初雪",
+      "row": 4,
+      "col": 4,
+      "direction": "RIGHT"
+    },
+    {
+      "frame": 704,
+      "cost": "11 → 11",
+      "cost_bar": {
+        "dp": 11,
+        "natural_gains": 23,
+        "frame_in_cycle": 13,
+        "cycle_length": 30,
+        "ruler_display": "13/29"
+      },
+      "operation": "按圣聆初雪三技能"
+    },
+    {
+      "frame": 936,
+      "cost": "19 → 0",
+      "cost_bar": {
+        "dp": 19,
+        "natural_gains": 31,
+        "frame_in_cycle": 5,
+        "cycle_length": 30,
+        "ruler_display": "5/29"
+      },
+      "operation": "部署逻各斯",
+      "row": 5,
+      "col": 6,
+      "direction": "RIGHT"
+    },
+    {
+      "frame": 1238,
+      "cost": "10 → 10",
+      "cost_bar": {
+        "dp": 10,
+        "natural_gains": 41,
+        "frame_in_cycle": 7,
+        "cycle_length": 30,
+        "ruler_display": "7/29"
+      },
+      "operation": "按逻各斯二技能"
+    },
+    {
+      "frame": 1662,
+      "cost": "24 → 0",
+      "cost_bar": {
+        "dp": 24,
+        "natural_gains": 55,
+        "frame_in_cycle": 11,
+        "cycle_length": 30,
+        "ruler_display": "11/29"
+      },
+      "operation": "部署玛露西尔",
+      "row": 5,
+      "col": 4,
+      "direction": "RIGHT"
+    },
+    {
+      "frame": 1670,
+      "cost": "0 → 11",
+      "cost_bar": {
+        "dp": 0,
+        "natural_gains": 55,
+        "frame_in_cycle": 19,
+        "cycle_length": 30,
+        "ruler_display": "19/29"
+      },
+      "operation": "撤退圣聆初雪（返 11 费）"
+    },
+    {
+      "frame": 1938,
+      "cost": "20 → 1",
+      "cost_bar": {
+        "dp": 20,
+        "natural_gains": 64,
+        "frame_in_cycle": 17,
+        "cycle_length": 30,
+        "ruler_display": "17/29"
+      },
+      "operation": "部署真言",
+      "row": 4,
+      "col": 4,
+      "direction": "LEFT"
+    },
+    {
+      "frame": 2020,
+      "cost": "4 → 4",
+      "cost_bar": {
+        "dp": 4,
+        "natural_gains": 67,
+        "frame_in_cycle": 9,
+        "cycle_length": 30,
+        "ruler_display": "9/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 2219,
+      "cost": "10 → 10",
+      "cost_bar": {
+        "dp": 10,
+        "natural_gains": 73,
+        "frame_in_cycle": 28,
+        "cycle_length": 30,
+        "ruler_display": "28/29"
+      },
+      "operation": "按真言三技能"
+    },
+    {
+      "frame": 2365,
+      "cost": "15 → 15",
+      "cost_bar": {
+        "dp": 15,
+        "natural_gains": 78,
+        "frame_in_cycle": 24,
+        "cycle_length": 30,
+        "ruler_display": "24/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 2455,
+      "cost": "18 → 18",
+      "cost_bar": {
+        "dp": 18,
+        "natural_gains": 81,
+        "frame_in_cycle": 24,
+        "cycle_length": 30,
+        "ruler_display": "24/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 2485,
+      "cost": "19 → 19",
+      "cost_bar": {
+        "dp": 19,
+        "natural_gains": 82,
+        "frame_in_cycle": 24,
+        "cycle_length": 30,
+        "ruler_display": "24/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 2576,
+      "cost": "22 → 22",
+      "cost_bar": {
+        "dp": 22,
+        "natural_gains": 85,
+        "frame_in_cycle": 25,
+        "cycle_length": 30,
+        "ruler_display": "25/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 2700,
+      "cost": "26 → 35",
+      "cost_bar": {
+        "dp": 26,
+        "natural_gains": 89,
+        "frame_in_cycle": 29,
+        "cycle_length": 30,
+        "ruler_display": "29/29"
+      },
+      "operation": "撤退真言（返 9 费）"
+    },
+    {
+      "frame": 2743,
+      "cost": "37 → 37",
+      "cost_bar": {
+        "dp": 37,
+        "natural_gains": 91,
+        "frame_in_cycle": 12,
+        "cycle_length": 30,
+        "ruler_display": "12/29"
+      },
+      "operation": "按逻各斯二技能"
+    },
+    {
+      "frame": 2856,
+      "cost": "41 → 41",
+      "cost_bar": {
+        "dp": 41,
+        "natural_gains": 95,
+        "frame_in_cycle": 5,
+        "cycle_length": 30,
+        "ruler_display": "5/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 2899,
+      "cost": "42 → 23",
+      "cost_bar": {
+        "dp": 42,
+        "natural_gains": 96,
+        "frame_in_cycle": 18,
+        "cycle_length": 30,
+        "ruler_display": "18/29"
+      },
+      "operation": "部署艾雅法拉",
+      "row": 3,
+      "col": 8,
+      "direction": "LEFT"
+    },
+    {
+      "frame": 2953,
+      "cost": "25 → 34",
+      "cost_bar": {
+        "dp": 25,
+        "natural_gains": 98,
+        "frame_in_cycle": 12,
+        "cycle_length": 30,
+        "ruler_display": "12/29"
+      },
+      "operation": "撤退艾雅法拉（返 9 费）"
+    },
+    {
+      "frame": 3054,
+      "cost": "37 → 49",
+      "cost_bar": {
+        "dp": 37,
+        "natural_gains": 101,
+        "frame_in_cycle": 23,
+        "cycle_length": 30,
+        "ruler_display": "23/29"
+      },
+      "operation": "撤退玛露西尔（返 12 费）"
+    },
+    {
+      "frame": 3152,
+      "cost": "53 → 33",
+      "cost_bar": {
+        "dp": 53,
+        "natural_gains": 105,
+        "frame_in_cycle": 1,
+        "cycle_length": 30,
+        "ruler_display": "1/29"
+      },
+      "operation": "部署荒芜拉普兰德",
+      "row": 5,
+      "col": 10,
+      "direction": "LEFT"
+    },
+    {
+      "frame": 3296,
+      "cost": "37 → 13",
+      "cost_bar": {
+        "dp": 37,
+        "natural_gains": 109,
+        "frame_in_cycle": 25,
+        "cycle_length": 30,
+        "ruler_display": "25/29"
+      },
+      "operation": "部署莫斯提马",
+      "row": 4,
+      "col": 8,
+      "direction": "LEFT"
+    },
+    {
+      "frame": 3404,
+      "cost": "17 → 17",
+      "cost_bar": {
+        "dp": 17,
+        "natural_gains": 113,
+        "frame_in_cycle": 13,
+        "cycle_length": 30,
+        "ruler_display": "13/29"
+      },
+      "operation": "按荒芜拉普兰德三技能"
+    },
+    {
+      "frame": 3988,
+      "cost": "36 → 36",
+      "cost_bar": {
+        "dp": 36,
+        "natural_gains": 132,
+        "frame_in_cycle": 27,
+        "cycle_length": 30,
+        "ruler_display": "27/29"
+      },
+      "operation": "按逻各斯二技能"
+    },
+    {
+      "frame": 4900,
+      "cost": "67 → 67",
+      "cost_bar": {
+        "dp": 67,
+        "natural_gains": 163,
+        "frame_in_cycle": 9,
+        "cycle_length": 30,
+        "ruler_display": "9/29"
+      },
+      "operation": "按莫斯提马三技能"
+    },
+    {
+      "frame": 5415,
+      "cost": "84 → 44",
+      "cost_bar": {
+        "dp": 84,
+        "natural_gains": 180,
+        "frame_in_cycle": 14,
+        "cycle_length": 30,
+        "ruler_display": "14/29"
+      },
+      "operation": "部署干扰装置",
+      "row": 4,
+      "col": 4,
+      "direction": "LEFT"
+    },
+    {
+      "frame": 5448,
+      "cost": "45 → 12",
+      "cost_bar": {
+        "dp": 45,
+        "natural_gains": 181,
+        "frame_in_cycle": 17,
+        "cycle_length": 30,
+        "ruler_display": "17/29"
+      },
+      "operation": "部署圣聆初雪",
+      "row": 5,
+      "col": 4,
+      "direction": "RIGHT"
+    },
+    {
+      "frame": 5736,
+      "cost": "22 → 22",
+      "cost_bar": {
+        "dp": 22,
+        "natural_gains": 191,
+        "frame_in_cycle": 5,
+        "cycle_length": 30,
+        "ruler_display": "5/29"
+      },
+      "operation": "按圣聆初雪三技能"
+    },
+    {
+      "frame": 5754,
+      "cost": "22 → 31",
+      "cost_bar": {
+        "dp": 22,
+        "natural_gains": 191,
+        "frame_in_cycle": 23,
+        "cycle_length": 30,
+        "ruler_display": "23/29"
+      },
+      "operation": "撤退逻各斯（返 9 费）"
+    },
+    {
+      "frame": 6426,
+      "cost": "54 → 18",
+      "cost_bar": {
+        "dp": 54,
+        "natural_gains": 214,
+        "frame_in_cycle": 5,
+        "cycle_length": 30,
+        "ruler_display": "5/29"
+      },
+      "operation": "部署玛露西尔",
+      "row": 5,
+      "col": 6,
+      "direction": "LEFT"
+    },
+    {
+      "frame": 6642,
+      "cost": "25 → 25",
+      "cost_bar": {
+        "dp": 25,
+        "natural_gains": 221,
+        "frame_in_cycle": 11,
+        "cycle_length": 30,
+        "ruler_display": "11/29"
+      },
+      "operation": "按荒芜拉普兰德三技能"
+    },
+    {
+      "frame": 7020,
+      "cost": "37 → 9",
+      "cost_bar": {
+        "dp": 37,
+        "natural_gains": 233,
+        "frame_in_cycle": 29,
+        "cycle_length": 30,
+        "ruler_display": "29/29"
+      },
+      "operation": "部署真言",
+      "row": 3,
+      "col": 8,
+      "direction": "LEFT"
+    },
+    {
+      "frame": 7305,
+      "cost": "19 → 19",
+      "cost_bar": {
+        "dp": 19,
+        "natural_gains": 243,
+        "frame_in_cycle": 14,
+        "cycle_length": 30,
+        "ruler_display": "14/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 7461,
+      "cost": "24 → 24",
+      "cost_bar": {
+        "dp": 24,
+        "natural_gains": 248,
+        "frame_in_cycle": 20,
+        "cycle_length": 30,
+        "ruler_display": "20/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 7480,
+      "cost": "25 → 25",
+      "cost_bar": {
+        "dp": 25,
+        "natural_gains": 249,
+        "frame_in_cycle": 9,
+        "cycle_length": 30,
+        "ruler_display": "9/29"
+      },
+      "operation": "按真言三技能"
+    },
+    {
+      "frame": 7902,
+      "cost": "39 → 39",
+      "cost_bar": {
+        "dp": 39,
+        "natural_gains": 263,
+        "frame_in_cycle": 11,
+        "cycle_length": 30,
+        "ruler_display": "11/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 8271,
+      "cost": "51 → 51",
+      "cost_bar": {
+        "dp": 51,
+        "natural_gains": 275,
+        "frame_in_cycle": 20,
+        "cycle_length": 30,
+        "ruler_display": "20/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 8473,
+      "cost": "58 → 30",
+      "cost_bar": {
+        "dp": 58,
+        "natural_gains": 282,
+        "frame_in_cycle": 12,
+        "cycle_length": 30,
+        "ruler_display": "12/29"
+      },
+      "operation": "部署艾雅法拉",
+      "row": 2,
+      "col": 5,
+      "direction": "LEFT"
+    },
+    {
+      "frame": 8630,
+      "cost": "35 → 35",
+      "cost_bar": {
+        "dp": 35,
+        "natural_gains": 287,
+        "frame_in_cycle": 19,
+        "cycle_length": 30,
+        "ruler_display": "19/29"
+      },
+      "operation": "按圣聆初雪三技能"
+    },
+    {
+      "frame": 8656,
+      "cost": "36 → 36",
+      "cost_bar": {
+        "dp": 36,
+        "natural_gains": 288,
+        "frame_in_cycle": 15,
+        "cycle_length": 30,
+        "ruler_display": "15/29"
+      },
+      "operation": "按莫斯提马三技能"
+    },
+    {
+      "frame": 8669,
+      "cost": "36 → 36",
+      "cost_bar": {
+        "dp": 36,
+        "natural_gains": 288,
+        "frame_in_cycle": 28,
+        "cycle_length": 30,
+        "ruler_display": "28/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 8698,
+      "cost": "37 → 37",
+      "cost_bar": {
+        "dp": 37,
+        "natural_gains": 289,
+        "frame_in_cycle": 27,
+        "cycle_length": 30,
+        "ruler_display": "27/29"
+      },
+      "operation": "按玛露西尔三技能"
+    },
+    {
+      "frame": 8708,
+      "cost": "38 → 38",
+      "cost_bar": {
+        "dp": 38,
+        "natural_gains": 290,
+        "frame_in_cycle": 7,
+        "cycle_length": 30,
+        "ruler_display": "7/29"
+      },
+      "operation": "按艾雅法拉三技能"
+    },
+    {
+      "frame": 9030,
+      "cost": "48 → 48",
+      "cost_bar": {
+        "dp": 48,
+        "natural_gains": 300,
+        "frame_in_cycle": 29,
+        "cycle_length": 30,
+        "ruler_display": "29/29"
+      },
+      "operation": "按荒芜拉普兰德三技能"
+    },
+    {
+      "frame": 9550,
+      "cost": "66 → 66",
+      "cost_bar": {
+        "dp": 66,
+        "natural_gains": 318,
+        "frame_in_cycle": 9,
+        "cycle_length": 30,
+        "ruler_display": "9/29"
+      },
+      "operation": "按真言三技能"
+    },
+    {
+      "frame": 9576,
+      "cost": "67 → 79",
+      "cost_bar": {
+        "dp": 67,
+        "natural_gains": 319,
+        "frame_in_cycle": 5,
+        "cycle_length": 30,
+        "ruler_display": "5/29"
+      },
+      "operation": "撤退莫斯提马（返 12 费）"
+    },
+    {
+      "frame": 9576,
+      "cost": "79 → 51",
+      "cost_bar": {
+        "dp": 79,
+        "natural_gains": 319,
+        "frame_in_cycle": 5,
+        "cycle_length": 30,
+        "ruler_display": "5/29"
+      },
+      "operation": "部署逻各斯",
+      "row": 4,
+      "col": 8,
+      "direction": "UP"
+    },
+    {
+      "frame": 9876,
+      "cost": "61 → 61",
+      "cost_bar": {
+        "dp": 61,
+        "natural_gains": 329,
+        "frame_in_cycle": 5,
+        "cycle_length": 30,
+        "ruler_display": "5/29"
+      },
+      "operation": "按逻各斯二技能"
+    }
+  ]
+}
